@@ -1,5 +1,5 @@
 resource "google_compute_router" "router" {
   name    = "my-router"
-  region  = google_compute_subnetwork.managment-subnet.id
+  region  = "us-central1"
   network = google_compute_network.vpc_network.id
 }

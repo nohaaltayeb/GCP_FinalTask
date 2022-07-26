@@ -1,5 +1,5 @@
 resource "google_compute_firewall" "allow-ssh" {
-  project     = "My Project Noha"
+  project     = "my-project-noha"
   name        = "allow-ssh"
   network     =  google_compute_network.vpc_network.id
   direction     = "INGRESS"
