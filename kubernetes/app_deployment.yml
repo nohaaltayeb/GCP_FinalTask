@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: my-python
+  template:
+    metadata:
+      labels:
+        name: my-python
+    spec:
+      containers:
+      - name: my-python
+        image: gcr.io/my-project-noha/nohaltayeb-my-python
+        ports:
+        - containerPort: 8000
+        env:
+          - name: ENVIRONMENT
+            value: "DEV"
+          - name: HOST
+            value: "localhost"
+          - name: PORT
+            value: "8000"
+          - name: REDIS_HOST
+            value: "redis-service"
+          - name: REDIS_PORT
+            value: "6379"
+          - name: REDIS_DB
+            value: "0"
+
+
+
+

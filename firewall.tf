@@ -5,7 +5,7 @@ resource "google_compute_firewall" "allow-ssh" {
   direction     = "INGRESS"
   source_ranges =  [ "35.235.240.0/20" ]
 
-  description = "Creates firewall rule targeting tagged instances"
+  description = "Creates firewall rule for instances"
   depends_on = [
     google_compute_network.vpc_network
   ]
@@ -14,5 +14,5 @@ resource "google_compute_firewall" "allow-ssh" {
     protocol  = "tcp"
     ports     = ["22"]
   }
-
+  
 }
