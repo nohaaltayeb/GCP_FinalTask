@@ -44,7 +44,8 @@ terraform apply
 
 ## Containerizing  python application
 
-I have created a one image for 2 containers  that connect a python app with redis database. 
+I have created a one image for 2 containers  that connect a python app with redis database,
+and then push it to GCR. 
 
 ```bash
 docker build -t python-app .
@@ -77,8 +78,8 @@ kubectl -f create app_deployment.yml
 kubectl get svc
 ```
 
-![getsvc.png](GCPTask%2025c6402c70e64b54a70762a6fba303e1/getsvc.png)
+![getsvc.png](screenshots/getsvc.png)
 
 ## And here is the app 🥳
 
-![lovelyApp.png](GCPTask%2025c6402c70e64b54a70762a6fba303e1/lovelyApp.png)
+![lovelyApp.png](screenshots/lovelyApp.png)
